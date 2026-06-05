@@ -39,4 +39,7 @@ print(setA.issubset(setB))
 print(setC.issubset(setA))
 print(setA | setB)
 
+name1 = {"Ade"}
+name2 = {"john"}
+print(name1 & name2)
 
