@@ -28,13 +28,13 @@ confirm = 1 in tup
 print(confirm)
 
 # Set
-set = {1,2,2,3,4,5}
-print(set)
+my_set = {1,2,2,3,4,5}
+print(my_set)
 
-print(2 in set)
+print(2 in my_set)
 
-set.add(6)
-print(set)
+my_set.add(6)
+print(my_set)
 
 print('........................................................')
 setA = {1, 3, 5, 6, 7, 9}
@@ -115,3 +115,43 @@ print(c.imag)
 print(c.real)
 
 print(complex(8,10))
+
+print(int(3.14))
+
+is_true = 10 > 5
+is_false = 10 > 15
+
+print(is_true)
+print(is_false)
+print(type(is_true))
+print(int(is_true))
+print(int(is_false))
+
+# range
+r = range(0,10)
+print(r)
+print(list(r))
+print(set(r))
+print(set(range(5,15)))
+print(tuple(range(3,8)))
+
+# operator
+a=10
+b=2
+c=3
+print(a+b) # addition
+print(a-b) # subtraction
+print(a*b) # multiplication
+print(a/b) # division
+print(a//c) # floor division
+print(a%c) # modulus
+print(a**c) # exponentiation
+print(-a) # negation
+print(a > b) # greater than
+print(a < b) # less than
+print(a == b) # equal to
+print(a != b) # not equal to
+print(a >= b) # greater than or equal to
+print(a <= b) # less than or equal to
+a += 2
+print(a)
