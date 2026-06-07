@@ -1,3 +1,5 @@
+import math
+
 # List
 listA = [1,2,3,4,5]
 print(listA)
@@ -155,3 +157,16 @@ print(a >= b) # greater than or equal to
 print(a <= b) # less than or equal to
 a += 2
 print(a)
+
+# math functions
+print(math.sqrt(16))
+print(math.ceil(-10.2))
+print(math.floor(-10.2))
+print(math.fabs(-10.2)) # absolute value
+
+# swapping
+x = 10
+y = 20
+x, y = y, x
+print(x, y)
+
