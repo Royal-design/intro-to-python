@@ -30,3 +30,10 @@ for value in range(10):
         break
     print(value)
     
+    for value in range(20):
+        if value % 3 == 0:
+            continue
+        if value == 8:
+            break
+        print(f'I love you in {value}')
+    
