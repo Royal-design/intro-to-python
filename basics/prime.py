@@ -17,6 +17,9 @@
 #         else:
 #             print(f"{n} is prime")
                 
+from operator import index, indexOf
+
+
 for n in range(1, 10):
     if n <= 1:
         print(f"{n} is not prime")
@@ -27,3 +30,4 @@ for n in range(1, 10):
                 break
         else:
             print(f"{n} is prime")
+

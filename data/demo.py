@@ -1,0 +1,11 @@
+f = open("data/MyData.txt", "r")
+print(f.readline())
+
+f = open("data/new.txt", "w")
+f.write("This is beautiful \n")
+f.write("This is awesome")
+f.write("\nI need money")
+f1 = open("data/new.txt", "a")
+f1.write("\nI am me")
+f2 = open("data/new.txt", "r")
+print(f2.read())
