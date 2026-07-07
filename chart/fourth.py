@@ -23,6 +23,7 @@ counts = np.array([224, 45, 36])
 
 # Total
 total = 305
+total_percent = 100.0
 
 
 # --------------------------------------------------
@@ -75,7 +76,7 @@ for i, value in enumerate(percent):
 # Axes
 # --------------------------------------------------
 
-ax.set_xlim(0,100)
+ax.set_xlim(0,110)
 
 ax.set_xticks([0,25,50,75,100])
 ax.set_xticklabels(
@@ -105,6 +106,26 @@ ax.tick_params(
     length=0
 )
 
+# --------------------------------------------------
+# Legend
+# --------------------------------------------------
+
+legend = [
+    Patch(color=colors[0], label="Mostly as an opportunity"),
+    Patch(color=colors[1], label="Mostly as a risk"),
+    Patch(color=colors[2], label="Others"),
+]
+
+ax.legend(
+    handles=legend,
+    ncol=3,
+    frameon=False,
+    loc="upper left",
+    bbox_to_anchor=(0, 1.12),
+    fontsize=10,
+    handlelength=1.5,
+    columnspacing=2.0
+)
 
 # --------------------------------------------------
 # Title
@@ -120,17 +141,36 @@ ax.set_title(
 
 
 # --------------------------------------------------
-# Total annotation
+# Totals at end
 # --------------------------------------------------
 
+for i in range(len(labels)):
+    ax.text(
+        101,
+        y[i],
+        f"{counts[i]} ({percent[i]:.1f}%)",
+        va="center",
+        fontsize=10,
+        fontweight="bold"
+    )
+
+# Header
 ax.text(
     101,
-    -0.5,
-    f"Total N = {total}",
+    -0.28,
+    "Total (N)",
     fontsize=10,
     fontweight="bold"
 )
 
+# Grand total at bottom
+ax.text(
+    101,
+    y[-1] + 0.32,
+    f"{total} ({total_percent:.1f}%)",
+    fontsize=11,
+    fontweight="bold"
+)
 
 plt.tight_layout()
 
@@ -145,10 +185,6 @@ plt.savefig(
     bbox_inches="tight"
 )
 
-plt.savefig(
-    "Overall_AI_Perception.pdf",
-    bbox_inches="tight"
-)
 
 
 plt.show()
