@@ -134,21 +134,6 @@ for name, vals, counts, color, text_color in series:
 
 
 
-# --------------------------------------------------
-# Total labels at right
-# --------------------------------------------------
-
-for i in range(len(labels)):
-
-    ax.text(
-        102,
-        y[i],
-        f"N={totals[i]}",
-        va="center",
-        fontsize=9,
-        fontweight="bold"
-    )
-
 
 # --------------------------------------------------
 # Axes
@@ -222,28 +207,19 @@ ax.legend(
 
 
 
-# --------------------------------------------------
-# Title
-# --------------------------------------------------
+# # --------------------------------------------------
+# # Title
+# # --------------------------------------------------
 
-ax.set_title(
-    "Integration of AI into Research Activities by Career Stage",
-    fontsize=15,
-    fontweight="bold",
-    loc="left",
-    pad=45
-)
+# ax.set_title(
+#     "Integration of AI into Research Activities by Career Stage",
+#     fontsize=15,
+#     fontweight="bold",
+#     loc="left",
+#     pad=45
+# )
 
 
-# Total header
-
-ax.text(
-    102,
-    -0.45,
-    "Total",
-    fontsize=10,
-    fontweight="bold"
-)
 
 
 plt.tight_layout()
@@ -259,10 +235,6 @@ plt.savefig(
     bbox_inches="tight"
 )
 
-plt.savefig(
-    "AI_Integration_by_Career_Stage.pdf",
-    bbox_inches="tight"
-)
 
 
 plt.show()

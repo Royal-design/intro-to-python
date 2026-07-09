@@ -136,41 +136,12 @@ ax.set_title(
     fontsize=15,
     fontweight="bold",
     loc="left",
-    pad=20
+    pad=30
 )
 
 
-# --------------------------------------------------
-# Totals at end
-# --------------------------------------------------
 
-for i in range(len(labels)):
-    ax.text(
-        101,
-        y[i],
-        f"{counts[i]} ({percent[i]:.1f}%)",
-        va="center",
-        fontsize=10,
-        fontweight="bold"
-    )
 
-# Header
-ax.text(
-    101,
-    -0.28,
-    "Total (N)",
-    fontsize=10,
-    fontweight="bold"
-)
-
-# Grand total at bottom
-ax.text(
-    101,
-    y[-1] + 0.32,
-    f"{total} ({total_percent:.1f}%)",
-    fontsize=11,
-    fontweight="bold"
-)
 
 plt.tight_layout()
 

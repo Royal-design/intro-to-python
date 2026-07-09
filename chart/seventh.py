@@ -147,22 +147,6 @@ for name,vals,counts,color,text_color in series:
 
 
 
-# --------------------------------------------------
-# Total at right
-# --------------------------------------------------
-
-for i,total in enumerate(totals):
-
-    ax.text(
-        101,
-        y[i],
-        f"N={total}",
-        va="center",
-        fontsize=9,
-        fontweight="bold"
-    )
-
-
 
 # --------------------------------------------------
 # Axes
@@ -234,27 +218,6 @@ ax.legend(
 )
 
 
-
-# --------------------------------------------------
-# Title
-# --------------------------------------------------
-
-ax.set_title(
-    "Barriers to AI Adoption by Career Stage",
-    fontsize=15,
-    fontweight="bold",
-    loc="left",
-    pad=50
-)
-
-
-ax.text(
-    101,
-    -0.45,
-    "Total",
-    fontsize=10,
-    fontweight="bold"
-)
 
 
 plt.tight_layout()

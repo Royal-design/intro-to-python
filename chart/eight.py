@@ -94,27 +94,6 @@ for name, values, counts, color, offset, txt_color in bars:
                 fontweight="bold"
             )
 
-# --------------------------------------------------
-# Totals
-# --------------------------------------------------
-
-for i in range(len(labels)):
-    ax.text(
-        104,
-        y[i],
-        f"{totals[i]} ({total_pct[i]:.1f}%)",
-        fontsize=10,
-        fontweight="bold",
-        va="center"
-    )
-
-ax.text(
-    104,
-    -0.8,
-    "Total (N)",
-    fontsize=10,
-    fontweight="bold"
-)
 
 # --------------------------------------------------
 # Axes
@@ -171,13 +150,13 @@ ax.legend(
 # Title
 # --------------------------------------------------
 
-ax.set_title(
-    "Awareness of MSCA Guidelines on the Use of Artificial Intelligence by Career Stage",
-    fontsize=16,
-    fontweight="bold",
-    loc="left",
-    pad=80
-)
+# ax.set_title(
+#     "Awareness of MSCA Guidelines on the Use of Artificial Intelligence by Career Stage",
+#     fontsize=16,
+#     fontweight="bold",
+#     loc="left",
+#     pad=80
+# )
 
 plt.tight_layout()
 

@@ -87,19 +87,6 @@ for name, vals, counts, color, text_color in series:
 
     left += vals
 
-# --------------------------------------------------
-# Totals at end
-# --------------------------------------------------
-
-for i in range(len(labels)):
-    ax.text(
-        101,
-        y[i],
-        f"{totals[i]} ({total_pct[i]:.1f}%)",
-        va="center",
-        fontsize=10,
-        fontweight="bold"
-    )
 
 # --------------------------------------------------
 # Axes
@@ -144,26 +131,7 @@ ax.legend(
     columnspacing=2.0
 )
 
-# --------------------------------------------------
-# Title
-# --------------------------------------------------
 
-ax.set_title(
-    "Perception of AI in Personal Research and Professional Activities by Career Stage",
-    fontsize=15,
-    fontweight="bold",
-    loc="left",
-    pad=60
-)
-
-# Header for totals
-ax.text(
-    101,
-    -0.7,
-    "Total (N)",
-    fontsize=10,
-    fontweight="bold"
-)
 
 plt.tight_layout()
 
@@ -177,9 +145,5 @@ plt.savefig(
     bbox_inches="tight"
 )
 
-plt.savefig(
-    "AI_Perception_by_Career_Stage.pdf",
-    bbox_inches="tight"
-)
 
 plt.show()

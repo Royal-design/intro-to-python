@@ -88,8 +88,8 @@ for name,vals,counts,color,text_color in series:
 
     for i,v in enumerate(vals):
 
-        # only label segments >=10%
-        if v>=10:
+        # only label segments >=5%
+        if v>=5:
             ax.text(
                 left[i]+v/2,
                 y[i],
@@ -102,19 +102,6 @@ for name,vals,counts,color,text_color in series:
 
     left+=vals
 
-# --------------------------------------------------
-# Totals at end
-# --------------------------------------------------
-
-for i in range(len(labels)):
-    ax.text(
-        101,
-        y[i],
-        f"{totals[i]} ({total_pct[i]}%)",
-        va="center",
-        fontsize=9,
-        fontweight="bold"
-    )
 
 # --------------------------------------------------
 # Axes
@@ -166,13 +153,6 @@ ax.legend(
 # Title
 # --------------------------------------------------
 
-ax.set_title(
-    "Institutional Structures, Policies and Practices by Career Stage",
-    fontsize=15,
-    fontweight="bold",
-    loc="left",
-    pad=70
-)
 
 plt.tight_layout()
 
@@ -182,9 +162,5 @@ plt.savefig(
     bbox_inches="tight"
 )
 
-plt.savefig(
-    "Institutional_Structures_by_Career_Stage.pdf",
-    bbox_inches="tight"
-)
 
 plt.show()

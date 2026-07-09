@@ -152,23 +152,6 @@ for name, vals, counts, color, text_color in series:
     left += vals
 
 
-
-# --------------------------------------------------
-# Total labels
-# --------------------------------------------------
-
-for i in range(len(labels)):
-
-    ax.text(
-        102,
-        y[i],
-        f"N={totals[i]}",
-        va="center",
-        fontsize=9,
-        fontweight="bold"
-    )
-
-
 # --------------------------------------------------
 # Axes
 # --------------------------------------------------
@@ -241,30 +224,6 @@ ax.legend(
 
 
 
-# --------------------------------------------------
-# Title
-# --------------------------------------------------
-
-ax.set_title(
-    "Current Role in Relation to the MSCA Programme",
-    fontsize=15,
-    fontweight="bold",
-    loc="left",
-    pad=45
-)
-
-
-# Header
-ax.text(
-    102,
-    -0.45,
-    "Total",
-    fontsize=10,
-    fontweight="bold"
-)
-
-
-
 plt.tight_layout()
 
 
@@ -278,10 +237,6 @@ plt.savefig(
     bbox_inches="tight"
 )
 
-plt.savefig(
-    "MSCA_Current_Role.pdf",
-    bbox_inches="tight"
-)
 
 
 plt.show()
